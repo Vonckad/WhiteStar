@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		174E35862A23F0CC38224C67 /* libPods-WhiteStar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A85420577215519E5CE72CD /* libPods-WhiteStar.a */; };
+		E317488A255D69E900FBD3CD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3174889255D69E900FBD3CD /* Product.swift */; };
+		E317488C255D6CC900FBD3CD /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E317488B255D6CC900FBD3CD /* ProductViewController.swift */; };
+		E3174891255D6F9300FBD3CD /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3174890255D6F9300FBD3CD /* ProductCollectionViewCell.swift */; };
+		E31748952562665100FBD3CD /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31748942562665100FBD3CD /* DetailProductViewController.swift */; };
+		E33F0B2625715CE8009AC576 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33F0B2025715CE8009AC576 /* BasketViewController.swift */; };
+		E33F0B2725715CE8009AC576 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33F0B2125715CE8009AC576 /* MyTableViewCell.swift */; };
+		E33F0B2A25715CE8009AC576 /* PersistanceRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33F0B2525715CE8009AC576 /* PersistanceRealm.swift */; };
+		E393F6312550914700EC73D1 /* SubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393F6302550914700EC73D1 /* SubCategoryViewController.swift */; };
 		E3F48986253DB69300F8E063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F48985253DB69300F8E063 /* AppDelegate.swift */; };
 		E3F48988253DB69300F8E063 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F48987253DB69300F8E063 /* SceneDelegate.swift */; };
 		E3F4898A253DB69300F8E063 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F48989253DB69300F8E063 /* ViewController.swift */; };
@@ -15,15 +23,21 @@
 		E3F4898F253DB69700F8E063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3F4898E253DB69700F8E063 /* Assets.xcassets */; };
 		E3F48992253DB69700F8E063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F48990253DB69700F8E063 /* LaunchScreen.storyboard */; };
 		E3F4899A253DC3DE00F8E063 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F48999253DC3DE00F8E063 /* Model.swift */; };
-		E3F4899F2542D11600F8E063 /* CellCategory.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3F4899D2542D11600F8E063 /* CellCategory.xib */; };
-		E3F489A02542D11600F8E063 /* CellCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4899E2542D11600F8E063 /* CellCategory.swift */; };
-		E3F489A22544600A00F8E063 /* AlamofireLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F489A12544600A00F8E063 /* AlamofireLoader.swift */; };
+		E3F489A22544600A00F8E063 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F489A12544600A00F8E063 /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2425094A1CD06F0F52CAFE09 /* Pods-WhiteStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteStar.debug.xcconfig"; path = "Target Support Files/Pods-WhiteStar/Pods-WhiteStar.debug.xcconfig"; sourceTree = "<group>"; };
 		4A85420577215519E5CE72CD /* libPods-WhiteStar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhiteStar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0756C146AD5679EA177C619 /* Pods-WhiteStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteStar.release.xcconfig"; path = "Target Support Files/Pods-WhiteStar/Pods-WhiteStar.release.xcconfig"; sourceTree = "<group>"; };
+		E3174889255D69E900FBD3CD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		E317488B255D6CC900FBD3CD /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		E3174890255D6F9300FBD3CD /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		E31748942562665100FBD3CD /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
+		E33F0B2025715CE8009AC576 /* BasketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		E33F0B2125715CE8009AC576 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		E33F0B2525715CE8009AC576 /* PersistanceRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceRealm.swift; sourceTree = "<group>"; };
+		E393F6302550914700EC73D1 /* SubCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryViewController.swift; sourceTree = "<group>"; };
 		E3F48982253DB69300F8E063 /* WhiteStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F48985253DB69300F8E063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F48987253DB69300F8E063 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +47,7 @@
 		E3F48991253DB69700F8E063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3F48993253DB69700F8E063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3F48999253DC3DE00F8E063 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		E3F4899D2542D11600F8E063 /* CellCategory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellCategory.xib; sourceTree = "<group>"; };
-		E3F4899E2542D11600F8E063 /* CellCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellCategory.swift; sourceTree = "<group>"; };
-		E3F489A12544600A00F8E063 /* AlamofireLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireLoader.swift; sourceTree = "<group>"; };
+		E3F489A12544600A00F8E063 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E317488D255D6E1A00FBD3CD /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E3F48989253DB69300F8E063 /* ViewController.swift */,
+				E393F6302550914700EC73D1 /* SubCategoryViewController.swift */,
+				E317488B255D6CC900FBD3CD /* ProductViewController.swift */,
+				E3174890255D6F9300FBD3CD /* ProductCollectionViewCell.swift */,
+				E31748942562665100FBD3CD /* DetailProductViewController.swift */,
+				E33F0B1F25715CE8009AC576 /* BasketView */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E317488E255D6E2300FBD3CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E3F489A12544600A00F8E063 /* ApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E317488F255D6E3700FBD3CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3F48999253DC3DE00F8E063 /* Model.swift */,
+				E3174889255D69E900FBD3CD /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E33F0B1F25715CE8009AC576 /* BasketView */ = {
+			isa = PBXGroup;
+			children = (
+				E33F0B2025715CE8009AC576 /* BasketViewController.swift */,
+				E33F0B2125715CE8009AC576 /* MyTableViewCell.swift */,
+				E33F0B2525715CE8009AC576 /* PersistanceRealm.swift */,
+			);
+			path = BasketView;
+			sourceTree = "<group>";
+		};
 		E3F48979253DB69300F8E063 = {
 			isa = PBXGroup;
 			children = (
@@ -90,11 +142,9 @@
 			children = (
 				E3F48985253DB69300F8E063 /* AppDelegate.swift */,
 				E3F48987253DB69300F8E063 /* SceneDelegate.swift */,
-				E3F48989253DB69300F8E063 /* ViewController.swift */,
-				E3F489A12544600A00F8E063 /* AlamofireLoader.swift */,
-				E3F48999253DC3DE00F8E063 /* Model.swift */,
-				E3F4899E2542D11600F8E063 /* CellCategory.swift */,
-				E3F4899D2542D11600F8E063 /* CellCategory.xib */,
+				E317488D255D6E1A00FBD3CD /* Screen */,
+				E317488E255D6E2300FBD3CD /* Network */,
+				E317488F255D6E3700FBD3CD /* Model */,
 				E3F4898B253DB69300F8E063 /* Main.storyboard */,
 				E3F4898E253DB69700F8E063 /* Assets.xcassets */,
 				E3F48990253DB69700F8E063 /* LaunchScreen.storyboard */,
@@ -161,7 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3F4899F2542D11600F8E063 /* CellCategory.xib in Resources */,
 				E3F48992253DB69700F8E063 /* LaunchScreen.storyboard in Resources */,
 				E3F4898F253DB69700F8E063 /* Assets.xcassets in Resources */,
 				E3F4898D253DB69300F8E063 /* Main.storyboard in Resources */,
@@ -200,12 +249,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E33F0B2625715CE8009AC576 /* BasketViewController.swift in Sources */,
+				E393F6312550914700EC73D1 /* SubCategoryViewController.swift in Sources */,
 				E3F4898A253DB69300F8E063 /* ViewController.swift in Sources */,
-				E3F489A02542D11600F8E063 /* CellCategory.swift in Sources */,
+				E33F0B2A25715CE8009AC576 /* PersistanceRealm.swift in Sources */,
 				E3F48986253DB69300F8E063 /* AppDelegate.swift in Sources */,
 				E3F48988253DB69300F8E063 /* SceneDelegate.swift in Sources */,
+				E33F0B2725715CE8009AC576 /* MyTableViewCell.swift in Sources */,
 				E3F4899A253DC3DE00F8E063 /* Model.swift in Sources */,
-				E3F489A22544600A00F8E063 /* AlamofireLoader.swift in Sources */,
+				E3F489A22544600A00F8E063 /* ApiClient.swift in Sources */,
+				E317488C255D6CC900FBD3CD /* ProductViewController.swift in Sources */,
+				E3174891255D6F9300FBD3CD /* ProductCollectionViewCell.swift in Sources */,
+				E317488A255D69E900FBD3CD /* Product.swift in Sources */,
+				E31748952562665100FBD3CD /* DetailProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
