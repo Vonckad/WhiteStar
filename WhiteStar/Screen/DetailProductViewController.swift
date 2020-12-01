@@ -42,7 +42,7 @@ class DetailProductViewController: UIViewController, UIScrollViewDelegate {
         
         titleNameLabel.text = titileText
         aboutTextView.text = aboutText
-        priceLabel.text = price
+        priceLabel.text = "\(price) руб."
         photoPageControl.numberOfPages = detailPdoructImage.count
         basketBarButton.image = UIImage(named: "basket")
         
@@ -59,12 +59,12 @@ class DetailProductViewController: UIViewController, UIScrollViewDelegate {
         frame.size = photoScrollView.frame.size
             
         mySetImage = UIImageView(frame: frame)
+            
             mySetImage.contentMode = .scaleAspectFit
-            
-            
             
         self.photoScrollView.addSubview(mySetImage)
         apiClientDetailProduct.getImage(link: detailPdoructImage[index].imageURL, imageV: mySetImage)
+            
     }
         photoScrollView.contentSize = CGSize(width: photoScrollView.frame.size.width * CGFloat(detailPdoructImage.count), height: photoScrollView.frame.size.height)
         photoScrollView.delegate = self
@@ -170,7 +170,6 @@ extension DetailProductViewController: UITableViewDelegate, UITableViewDataSourc
             size = offersDetail[indexPath.row].size
             
         if let sizeT = size {
-//            showBasketViewController(size: ("\(titileText)\nразмер: \(sizeT)") )
             showBasketViewController(size: sizeT, name: titileText, price: price, colorName: colorN, imageData: imageData)
         }
     }

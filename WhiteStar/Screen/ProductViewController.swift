@@ -67,7 +67,7 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
         cell.myLabelOldPrice.text = product[indexPath.row].name
 //        cell.myLabelInfo.text = product[indexPath.row].name
         
-        cell.myLabelPrice.text = formatedPrice(index: indexPath)
+        cell.myLabelPrice.text = "\(formatedPrice(index: indexPath)) руб."
         apiClientProduct.getImage(link: product[indexPath.row].mainImage, imageV: cell.myImageView)
         
         return cell
@@ -84,17 +84,13 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
         let id = product[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let productVC = storyboard.instantiateViewController(identifier: "DetailProductViewController") as! DetailProductViewController
-        let basketVC = storyboard.instantiateViewController(identifier: "BasketViewController") as! BasketViewController
-       
+        
         productVC.titileText = id.name
         productVC.aboutText = id.description
         productVC.price = formatedPrice(index: indexPath)
         productVC.detailPdoructImage = id.productImages
         productVC.colorN = id.colorName
         productVC.imageData = apiClientProduct.getImageData(link: id.mainImage)
-        
-//        print("basketVC.imageData = apiClientProduct.getImageData(link: product[indexPath.row].mainImage) === ", apiClientProduct.getImageData(link: id.mainImage))
-//        print("MAINbasketVC.imageData === ", basketVC.imageData)
         
         if let offers = id.offers {
             productVC.offersDetail = offers

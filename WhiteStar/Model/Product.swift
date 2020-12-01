@@ -57,6 +57,6 @@ struct ProductImages: Decodable {
 }
 struct Offers: Decodable {
     let size: String
-    let quantity: String
+//    let quantity: String?
 }
 

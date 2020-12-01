@@ -241,29 +241,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXf-u2-LgW">
-                                <rect key="frame" x="0.0" y="25" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="-8" width="414" height="816"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ig9-Yj-4CB">
-                                        <rect key="frame" x="12" y="481.5" width="390" height="66.5"/>
+                                        <rect key="frame" x="12" y="687.5" width="390" height="66.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes"/>
                                     </textView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоимость" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ2-pN-HTW">
-                                        <rect key="frame" x="12" y="445.5" width="100.5" height="24"/>
+                                        <rect key="frame" x="12" y="651.5" width="100.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" id="N1M-7b-l30">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="349"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="Zqy-BB-gbj"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="fsf-wz-LV4"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" id="N1M-7b-l30">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="555"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </scrollView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yf-ts-aOy">
-                                        <rect key="frame" x="12" y="397.5" width="70" height="36"/>
+                                        <rect key="frame" x="12" y="603.5" width="70" height="36"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Размер">
@@ -274,13 +272,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Квартира" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BE-Ox-IX3">
-                                        <rect key="frame" x="12" y="355.5" width="390" height="30"/>
+                                        <rect key="frame" x="12" y="561.5" width="390" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPK-7s-Xnu">
-                                        <rect key="frame" x="218" y="397.5" width="184" height="38.5"/>
+                                        <rect key="frame" x="218" y="603.5" width="184" height="38.5"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Добавить в корзину">
@@ -291,11 +289,11 @@
                                         </connections>
                                     </button>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="chz-9N-hfH">
-                                        <rect key="frame" x="146" y="316" width="122" height="27.5"/>
+                                        <rect key="frame" x="146" y="522" width="122" height="27.5"/>
                                         <color key="currentPageIndicatorTintColor" systemColor="systemBlueColor"/>
                                     </pageControl>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="200" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgg-Mz-FD9">
-                                        <rect key="frame" x="367" y="448" width="35" height="21.5"/>
+                                        <rect key="frame" x="367" y="654" width="35" height="21.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -334,7 +332,7 @@
                             <constraint firstItem="aXf-u2-LgW" firstAttribute="leading" secondItem="iiB-EM-49c" secondAttribute="leading" id="9kg-DF-OK6"/>
                             <constraint firstItem="aXf-u2-LgW" firstAttribute="trailing" secondItem="iiB-EM-49c" secondAttribute="trailing" id="HhB-rs-46h"/>
                             <constraint firstAttribute="bottom" secondItem="aXf-u2-LgW" secondAttribute="bottom" id="Sbm-WC-69y"/>
-                            <constraint firstItem="aXf-u2-LgW" firstAttribute="topMargin" secondItem="yFA-Nz-N0v" secondAttribute="top" constant="33" id="x9Y-Jp-TLg"/>
+                            <constraint firstItem="aXf-u2-LgW" firstAttribute="topMargin" secondItem="yFA-Nz-N0v" secondAttribute="top" id="x9Y-Jp-TLg"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

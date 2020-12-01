@@ -19,7 +19,7 @@ import RealmSwift
         var name: String?
         var price: String?
         var colorName: String?
-//        var summprice = 0
+        var summprice = 0
         var imageData: Data?
         
         @IBOutlet var checkoutButtonLayer: UIView!
@@ -57,20 +57,30 @@ import RealmSwift
                     self.tableViewRealm.insertRows(at: [IndexPath.init(row: self.toDoList.count-1, section: 0  )], with: .automatic)
             })
         }
+            getTotalPrice()
     }
             
+        func getTotalPrice() {
+            summprice = 0
+            for it in toDoList {
+                if let price = Int(it.price) {
+                    summprice += price
+                    summPriceLabel.text = "\(String(summprice)) руб."
+                }
+            }
+        }
+        
         @IBAction func checkoutButton(_ sender: Any) {
             
             let allert = UIAlertController.init(title: "Ваш заказ оформлен!", message: "", preferredStyle: .actionSheet)
             let action = UIAlertAction(title: "Ок", style: .default, handler: nil)
             allert.addAction(action)
             present(allert, animated: true, completion: nil)
-
-            print("Ваш заказ оформлен.")
         }
     }
 
     //MARK: extension BasketViewControlle
+
 extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
     
     //MARK: UITableDataSourse
@@ -113,6 +123,7 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
                         self.realm.delete(item)
                     })
                     tableView.deleteRows(at: [indexPath], with: .automatic)
+                    getTotalPrice()
                 }
             }
             allert.addAction(addAction)
