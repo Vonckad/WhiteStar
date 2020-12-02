@@ -1,0 +1,6 @@
+module Pods_WhiteStar {
+  umbrella header "Pods-WhiteStar-umbrella.h"
+
+  export *
+  module * { export * }
+}
