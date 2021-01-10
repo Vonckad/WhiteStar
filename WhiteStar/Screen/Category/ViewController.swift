@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//import RealmSwift
 
 class ViewController: UIViewController {
 
@@ -15,6 +14,7 @@ class ViewController: UIViewController {
     var category: [Category] = []
     let apiClient: ApiClient = ApiClientImpl()
     var actView = UIActivityIndicatorView()
+    private var saveImage = SaveCategoryImageController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,6 @@ class ViewController: UIViewController {
             }
         })
     }
-    
 }
 
 //MARK:- extension
@@ -56,8 +55,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = categoriTableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
-        cell.textLabel?.text = category[indexPath.row].name
+        let cell = categoriTableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryTableViewCell
+        
+        saveImage.load(link: category[indexPath.row].image)
+                
+        cell.cellTitleLabel.text = category[indexPath.row].name
+        cell.cellImage.image = UIImage(data: saveImage.imageDataRealm[indexPath.row].imageData)
+        print("CATEGORY IMAGE === ", saveImage.imageDataRealm[0].imageData)
+
         return cell
     }
     

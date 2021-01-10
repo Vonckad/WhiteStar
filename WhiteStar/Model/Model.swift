@@ -43,11 +43,13 @@ struct RootModel: Decodable {
 
 struct Category: Decodable {
     let name: String
+    let image: String
     let subcategories: [CategoryArray]?
 }
 
 struct CategoryArray: Decodable {
     let id: NumerableString
+    let iconImage: String
     let name: String
     
     enum NumerableString: Codable {

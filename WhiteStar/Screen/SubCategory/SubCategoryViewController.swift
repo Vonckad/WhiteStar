@@ -10,16 +10,16 @@ import UIKit
 class SubCategoryViewController: UIViewController {
 
     @IBOutlet var subCategoryTableView: UITableView!
-    
     @IBOutlet var titileSubCategory: UINavigationItem!
+    
     var subCategory: [CategoryArray] = []
     var titleCategory: String = "Подкатегории"
+    let apiClient: ApiClient = ApiClientImpl()
+    private let saveImage = SaveSubCategoryImageController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//        titileSubCategory.title = "Подкатегории"
-//        print("sub === ", subCategory)
+        
         titileSubCategory.title = titleCategory
     }
 }
@@ -32,15 +32,17 @@ extension SubCategoryViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellSubCategory = tableView.dequeueReusableCell(withIdentifier: "CellSubCategory", for: indexPath)
-//        print("titleCategory === ", titleCategory)
-       
-        cellSubCategory.textLabel?.text = subCategory[indexPath.row].name
-        return cellSubCategory
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellSubCategory", for: indexPath) as! SubCategoryTableViewCell
+        
+        saveImage.load(link: subCategory[indexPath.row].iconImage)
+        
+        cell.cellTitleLabel.text = subCategory[indexPath.row].name
+        cell.cellImage.image = UIImage(data: saveImage.imageDataRealm[indexPath.row].imageData)
+
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        ProductViewController
         
         let id = subCategory[indexPath.row]
    

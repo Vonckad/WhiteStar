@@ -65,8 +65,6 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
         let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! ProductCollectionViewCell
         
         cell.myLabelOldPrice.text = product[indexPath.row].name
-//        cell.myLabelInfo.text = product[indexPath.row].name
-        
         cell.myLabelPrice.text = "\(formatedPrice(index: indexPath)) руб."
         apiClientProduct.getImage(link: product[indexPath.row].mainImage, imageV: cell.myImageView)
         
