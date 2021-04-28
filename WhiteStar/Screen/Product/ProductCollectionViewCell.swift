@@ -8,14 +8,8 @@
 import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet var myImageView: UIImageView!
+    @IBOutlet var myImageView: CustomImageView!
     @IBOutlet var myLabelOldPrice: UILabel!
     @IBOutlet var myLabelPrice: UILabel!
     @IBOutlet var myLabelInfo: UILabel!
- 
-//    override class func awakeFromNib() {
-//        super.awakeFromNib()
-//        myImageView.contentMode = .scaleToFill
-//    }
 }

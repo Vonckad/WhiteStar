@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     var category: [Category] = []
     let apiClient: ApiClient = ApiClientImpl()
     var actView = UIActivityIndicatorView()
-    private var saveImage = SaveCategoryImageController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +55,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = categoriTableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryTableViewCell
-        
-        saveImage.load(link: category[indexPath.row].image)
-                
         cell.cellTitleLabel.text = category[indexPath.row].name
-        cell.cellImage.image = UIImage(data: saveImage.imageDataRealm[indexPath.row].imageData)
-        print("CATEGORY IMAGE === ", saveImage.imageDataRealm[0].imageData)
-
+        cell.cellImage.loadImageUsingUrlStrting(urlString: category[indexPath.row].iconImage == "" ? "https://blackstarwear.ru/image/170829newmob.png" : "https://blackstarwear.ru/\(category[indexPath.row].iconImage)")
         return cell
     }
     

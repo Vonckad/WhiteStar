@@ -16,10 +16,9 @@
 		E33F0B2725715CE8009AC576 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33F0B2125715CE8009AC576 /* MyTableViewCell.swift */; };
 		E33F0B2A25715CE8009AC576 /* PersistanceRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33F0B2525715CE8009AC576 /* PersistanceRealm.swift */; };
 		E393F6312550914700EC73D1 /* SubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393F6302550914700EC73D1 /* SubCategoryViewController.swift */; };
-		E3AF078D25AB53DF003E6FB0 /* SubCategoryPersistanceRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AF078C25AB53DF003E6FB0 /* SubCategoryPersistanceRealm.swift */; };
+		E3CA958A25C843DC007D44F7 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA958925C843DC007D44F7 /* CustomImageView.swift */; };
 		E3CADC7825AB374700564A0A /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CADC7725AB374700564A0A /* CategoryTableViewCell.swift */; };
 		E3ED868125AB3D290045ED7F /* SubCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ED868025AB3D290045ED7F /* SubCategoryTableViewCell.swift */; };
-		E3ED868325AB3F070045ED7F /* CategoryImagePersistanceRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ED868225AB3F070045ED7F /* CategoryImagePersistanceRealm.swift */; };
 		E3F48986253DB69300F8E063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F48985253DB69300F8E063 /* AppDelegate.swift */; };
 		E3F48988253DB69300F8E063 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F48987253DB69300F8E063 /* SceneDelegate.swift */; };
 		E3F4898A253DB69300F8E063 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F48989253DB69300F8E063 /* ViewController.swift */; };
@@ -42,10 +41,9 @@
 		E33F0B2125715CE8009AC576 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		E33F0B2525715CE8009AC576 /* PersistanceRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceRealm.swift; sourceTree = "<group>"; };
 		E393F6302550914700EC73D1 /* SubCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryViewController.swift; sourceTree = "<group>"; };
-		E3AF078C25AB53DF003E6FB0 /* SubCategoryPersistanceRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryPersistanceRealm.swift; sourceTree = "<group>"; };
+		E3CA958925C843DC007D44F7 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		E3CADC7725AB374700564A0A /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		E3ED868025AB3D290045ED7F /* SubCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryTableViewCell.swift; sourceTree = "<group>"; };
-		E3ED868225AB3F070045ED7F /* CategoryImagePersistanceRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryImagePersistanceRealm.swift; sourceTree = "<group>"; };
 		E3F48982253DB69300F8E063 /* WhiteStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F48985253DB69300F8E063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F48987253DB69300F8E063 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +92,7 @@
 				E3AF078925AB5290003E6FB0 /* SubCategory */,
 				E3AF078A25AB52A7003E6FB0 /* Product */,
 				E3AF078B25AB52C3003E6FB0 /* DetailProduct */,
-				E33F0B1F25715CE8009AC576 /* BasketView */,
+				E33F0B1F25715CE8009AC576 /* Basket */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -116,21 +114,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		E33F0B1F25715CE8009AC576 /* BasketView */ = {
+		E33F0B1F25715CE8009AC576 /* Basket */ = {
 			isa = PBXGroup;
 			children = (
 				E33F0B2025715CE8009AC576 /* BasketViewController.swift */,
 				E33F0B2125715CE8009AC576 /* MyTableViewCell.swift */,
 				E33F0B2525715CE8009AC576 /* PersistanceRealm.swift */,
 			);
-			path = BasketView;
+			path = Basket;
 			sourceTree = "<group>";
 		};
 		E3AF078825AB527F003E6FB0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
 				E3F48989253DB69300F8E063 /* ViewController.swift */,
-				E3ED868225AB3F070045ED7F /* CategoryImagePersistanceRealm.swift */,
 				E3CADC7725AB374700564A0A /* CategoryTableViewCell.swift */,
 			);
 			path = Category;
@@ -140,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				E393F6302550914700EC73D1 /* SubCategoryViewController.swift */,
-				E3AF078C25AB53DF003E6FB0 /* SubCategoryPersistanceRealm.swift */,
 				E3ED868025AB3D290045ED7F /* SubCategoryTableViewCell.swift */,
 			);
 			path = SubCategory;
@@ -186,6 +182,7 @@
 			children = (
 				E3F48985253DB69300F8E063 /* AppDelegate.swift */,
 				E3F48987253DB69300F8E063 /* SceneDelegate.swift */,
+				E3CA958925C843DC007D44F7 /* CustomImageView.swift */,
 				E317488D255D6E1A00FBD3CD /* Screen */,
 				E317488E255D6E2300FBD3CD /* Network */,
 				E317488F255D6E3700FBD3CD /* Model */,
@@ -294,13 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E33F0B2625715CE8009AC576 /* BasketViewController.swift in Sources */,
+				E3CA958A25C843DC007D44F7 /* CustomImageView.swift in Sources */,
 				E393F6312550914700EC73D1 /* SubCategoryViewController.swift in Sources */,
 				E3ED868125AB3D290045ED7F /* SubCategoryTableViewCell.swift in Sources */,
 				E3F4898A253DB69300F8E063 /* ViewController.swift in Sources */,
 				E33F0B2A25715CE8009AC576 /* PersistanceRealm.swift in Sources */,
-				E3ED868325AB3F070045ED7F /* CategoryImagePersistanceRealm.swift in Sources */,
 				E3F48986253DB69300F8E063 /* AppDelegate.swift in Sources */,
-				E3AF078D25AB53DF003E6FB0 /* SubCategoryPersistanceRealm.swift in Sources */,
 				E3F48988253DB69300F8E063 /* SceneDelegate.swift in Sources */,
 				E33F0B2725715CE8009AC576 /* MyTableViewCell.swift in Sources */,
 				E3F4899A253DC3DE00F8E063 /* Model.swift in Sources */,
@@ -460,6 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E4F3RD8E26;
 				INFOPLIST_FILE = WhiteStar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E4F3RD8E26;
 				INFOPLIST_FILE = WhiteStar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

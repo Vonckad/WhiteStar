@@ -21,7 +21,7 @@ protocol ApiClient {
 }
 
 class ApiClientImpl: ApiClient {
-
+    
     func getCategory(onResult: @escaping (Result<[Category], Error>) -> Void) {
         
         let session = URLSession.shared
@@ -74,10 +74,9 @@ class ApiClientImpl: ApiClient {
     func getImage(link: String, imageV: UIImageView) {
         
         guard let imageURL = URL(string: "https://blackstarwear.ru/\(link)" ) else { return }
-                
             DispatchQueue.global().async {
                 guard let imageData = try? Data(contentsOf: imageURL) else { return }
-        
+                
                 let image = UIImage(data: imageData)
                 DispatchQueue.main.async {
                         imageV.image = image
@@ -89,15 +88,10 @@ class ApiClientImpl: ApiClient {
         
         var result = Data()
         if let imageURL = URL(string: "https://blackstarwear.ru/\(link)" ) {
-//            DispatchQueue.global().async {
                 if let imageData = try? Data(contentsOf: imageURL) {
                     result = imageData
-                    print("result === ", result)
                 }
-//            }
         }
-        print("Return result === ", result)
-
         return result
     }
 }

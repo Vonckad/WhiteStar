@@ -13,7 +13,6 @@ struct RootModel: Decodable {
     
     private struct DynamicCodingKeys: CodingKey {
        
-        
         var stringValue: String
         init?(stringValue: String) {
             self.stringValue = stringValue
@@ -21,7 +20,6 @@ struct RootModel: Decodable {
         var intValue: Int?
         
         init?(intValue: Int) {
-//            self.intValue = intValue
             return nil
         }
     }
@@ -43,12 +41,12 @@ struct RootModel: Decodable {
 
 struct Category: Decodable {
     let name: String
-    let image: String
+    let iconImage: String
     let subcategories: [CategoryArray]?
 }
 
 struct CategoryArray: Decodable {
-    let id: NumerableString
+    let id: NumerableString?
     let iconImage: String
     let name: String
     

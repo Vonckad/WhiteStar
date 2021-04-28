@@ -22,7 +22,6 @@ class ProductViewController: UIViewController {
 
     var actView = UIActivityIndicatorView()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         actView = UIActivityIndicatorView(frame: CGRect(x: view.center.x, y: view.center.y, width: 20, height: 20))
@@ -66,8 +65,7 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
         
         cell.myLabelOldPrice.text = product[indexPath.row].name
         cell.myLabelPrice.text = "\(formatedPrice(index: indexPath)) руб."
-        apiClientProduct.getImage(link: product[indexPath.row].mainImage, imageV: cell.myImageView)
-        
+        cell.myImageView.loadImageUsingUrlStrting(urlString: "https://blackstarwear.ru/\(product[indexPath.row].mainImage)")        
         return cell
     }
     
@@ -88,7 +86,12 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
         productVC.price = formatedPrice(index: indexPath)
         productVC.detailPdoructImage = id.productImages
         productVC.colorN = id.colorName
-        productVC.imageData = apiClientProduct.getImageData(link: id.mainImage)
+    
+        DispatchQueue.global().async {
+            productVC.imageData = self.apiClientProduct.getImageData(link: id.mainImage)
+        }
+
+        productVC.mainImageString = id.mainImage
         
         if let offers = id.offers {
             productVC.offersDetail = offers

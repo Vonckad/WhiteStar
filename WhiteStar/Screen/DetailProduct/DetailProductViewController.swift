@@ -34,17 +34,20 @@ class DetailProductViewController: UIViewController, UIScrollViewDelegate {
     var imageData = Data()
     let grayView = UIView()
     var offersTableView = UITableView()
+    var mainImageString = ""
     
     override func viewDidLoad() {
       
         sizeButton.layer.cornerRadius = 10
         addToBasked.layer.cornerRadius = 10
         
+        let mainImageProduct: ProductImages = .init(imageURL: mainImageString)
+        detailPdoructImage.append(mainImageProduct)
+        
         titleNameLabel.text = titileText
         aboutTextView.text = aboutText
         priceLabel.text = "\(price) руб."
         photoPageControl.numberOfPages = detailPdoructImage.count
-        basketBarButton.image = UIImage(named: "basket")
         
         setupScreens()
         
@@ -52,20 +55,20 @@ class DetailProductViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setupScreens() {
-        
-        for index in 0..<detailPdoructImage.count {
-        
-        frame.origin.x = photoScrollView.frame.size.width * CGFloat(index)
-        frame.size = photoScrollView.frame.size
-            
-        mySetImage = UIImageView(frame: frame)
-            
-            mySetImage.contentMode = .scaleAspectFit
-            
-        self.photoScrollView.addSubview(mySetImage)
-        apiClientDetailProduct.getImage(link: detailPdoructImage[index].imageURL, imageV: mySetImage)
-            
-    }
+    
+            for index in detailPdoructImage.indices {
+                
+            frame.origin.x = photoScrollView.frame.size.width * CGFloat(index)
+            frame.size = photoScrollView.frame.size
+                
+            mySetImage = UIImageView(frame: frame)
+                
+                mySetImage.contentMode = .scaleAspectFit
+                
+            self.photoScrollView.addSubview(mySetImage)
+            apiClientDetailProduct.getImage(link: detailPdoructImage[index].imageURL, imageV: mySetImage)
+        }
+    
         photoScrollView.contentSize = CGSize(width: photoScrollView.frame.size.width * CGFloat(detailPdoructImage.count), height: photoScrollView.frame.size.height)
         photoScrollView.delegate = self
     }
@@ -78,14 +81,7 @@ class DetailProductViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func sizeButtonAction(_ sender: Any) {
             createDetailOffersVC()
     }
-   
-    @IBAction func barButtonAction(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let basketVC = storyboard.instantiateViewController(identifier: "BasketViewController") as! BasketViewController
-        navigationController?.pushViewController(basketVC, animated: true)
-        
-    }
+
     @IBAction func addToBasketButton(_ sender: Any) {
         
         if size == nil {
@@ -93,6 +89,9 @@ class DetailProductViewController: UIViewController, UIScrollViewDelegate {
         } else if let mySize = size {
             showBasketViewController(size: mySize, name: titileText, price: price, colorName: colorN, imageData: imageData)
         }
+    }
+    @IBAction func bascetActionButton(_ sender: Any) {
+        showBasketViewController(size: size!, name: titileText, price: price, colorName: colorN, imageData: imageData)
     }
     func createDetailOffersVC() {
         
@@ -180,6 +179,7 @@ extension DetailProductViewController: UITableViewDelegate, UITableViewDataSourc
         basketVC.size = size
         basketVC.name = name
         basketVC.price = price
+        basketVC.count = 1
         basketVC.colorName = colorName
         basketVC.imageData = imageData
         navigationController?.pushViewController(basketVC, animated: true)
