@@ -11,7 +11,7 @@ struct RootModel: Decodable {
 
     var arrayCategory: [Category]
     
-    private struct DynamicCodingKeys: CodingKey {
+    struct DynamicCodingKeys: CodingKey {
        
         var stringValue: String
         init?(stringValue: String) {
@@ -27,19 +27,21 @@ struct RootModel: Decodable {
     init(from decoder: Decoder) throws {
 
             let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
-
             var tempArray = [Category]()
+        
+        for key in container.allKeys {
 
-            for key in container.allKeys {
+            var decodedObjectInt = try container.decode(Category.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
 
-                let decodedObjectInt = try container.decode(Category.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
-                tempArray.append(decodedObjectInt)
-            }
+            decodedObjectInt.idCategory = key.stringValue
+            tempArray.append(decodedObjectInt)
+            }        
         arrayCategory = tempArray
-        }
+    }
 }
 
 struct Category: Decodable {
+    var idCategory: String?
     let name: String
     let iconImage: String
     let subcategories: [CategoryArray]?

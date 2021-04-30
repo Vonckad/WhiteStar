@@ -13,7 +13,6 @@ struct RootProduct: Decodable {
     
     private struct DynamicCodingKeys: CodingKey {
        
-        
         var stringValue: String
         init?(stringValue: String) {
             self.stringValue = stringValue
@@ -53,10 +52,8 @@ struct Product: Decodable {
 
 struct ProductImages: Decodable {
     let imageURL: String
-//    let sortOrder: String
 }
 struct Offers: Decodable {
     let size: String
-//    let quantity: String?
 }
 
