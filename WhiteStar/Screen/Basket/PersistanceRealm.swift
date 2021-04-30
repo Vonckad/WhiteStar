@@ -15,7 +15,7 @@ class PersistanceRealm: Object {
     @objc dynamic var size = ""
     @objc dynamic var colorName = ""
     @objc dynamic var count = 0
-    
+    @objc dynamic var idProduct = ""
     @objc dynamic var imageData = Data()
 }
 
@@ -37,6 +37,11 @@ class MyRealm: MyRealmProtocol {
     }
     
     func addInRealm(item: PersistanceRealm, bool: Bool) {
+        for i in toDoListR {
+            if i.idProduct == item.idProduct {
+                print("совпало idProduct === ", item.idProduct)
+            }
+        }
         try! self.realm.write {
             if bool { self.realm.add(item) } else { self.realm.delete(item)}
         }

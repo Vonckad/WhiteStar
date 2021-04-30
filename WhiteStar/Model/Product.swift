@@ -32,7 +32,8 @@ struct RootProduct: Decodable {
 
             for key in container.allKeys {
 
-                let decodedObjectInt = try container.decode(Product.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
+                var decodedObjectInt = try container.decode(Product.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
+                decodedObjectInt.idProduct = key.stringValue
                 tempArray.append(decodedObjectInt)
             }
         arrayProduct = tempArray
@@ -40,6 +41,7 @@ struct RootProduct: Decodable {
 }
 
 struct Product: Decodable {
+    var idProduct: String?
     let name: String
     let mainImage: String
     let oldPrice: String?

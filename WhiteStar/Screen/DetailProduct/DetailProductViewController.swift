@@ -29,6 +29,7 @@ class DetailProductViewController: UIViewController, UIScrollViewDelegate {
     var size: String?
     var price = ""
     var colorN = ""
+    var idProduct = ""
     var mySetImage = UIImageView()
     var isHide = false
     var imageData = Data()
@@ -181,6 +182,7 @@ extension DetailProductViewController: UITableViewDelegate, UITableViewDataSourc
         basketVC.price = price
         basketVC.count = 1
         basketVC.colorName = colorName
+        basketVC.idProducct = idProduct
         basketVC.imageData = imageData
         navigationController?.pushViewController(basketVC, animated: true)
         hendlerTap()

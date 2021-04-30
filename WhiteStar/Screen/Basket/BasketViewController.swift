@@ -22,6 +22,7 @@ import UIKit
         var colorName: String?
         var count: Int?
         var summprice = 0
+        var idProducct: String?
         var imageData: Data?
         
         @IBOutlet var checkoutButtonLayer: UIView!
@@ -36,33 +37,34 @@ import UIKit
             
 // это по-моему сверх неправильное (некоректное) решение поиска совпавших товаров в карзине// но пока только оно работает
             if let sizeR = size, let nameR = name, let priceR = price, let colorNameR = colorName, let
-                imageDataR = imageData, let countR = count {
+                imageDataR = imageData, let countR = count, let idProductR = idProducct {
                 
                 let todoListItem = PersistanceRealm()
                 
-                func createItem() {
+//                func createItem() {
                     todoListItem.size = sizeR
                     todoListItem.name = nameR
                     todoListItem.price = priceR
                     todoListItem.count = countR
                     todoListItem.colorName = colorNameR
+                    todoListItem.idProduct = idProductR
                     todoListItem.imageData = imageDataR
-                }
+//                }
                 
                 if myRealm.toDoListR.count == 0 {
-                    createItem()
+//                    createItem()
                 } else {
                     
-                for i in myRealm.toDoListR {
-                    if i.name == nameR && i.size == sizeR {
-                        createItem()
-                        todoListItem.count = i.count + 1
-                        todoListItem.price = String( Int(priceR)! * todoListItem.count)
-                        myRealm.addInRealm(item: i, bool: false)
-                        } else {
-                            createItem()
-                        }
-                    }
+//                for i in myRealm.toDoListR {
+//                    if i.name == nameR && i.size == sizeR {
+//                        createItem()
+//                        todoListItem.count = i.count + 1
+//                        todoListItem.price = String( Int(priceR)! * todoListItem.count)
+//                        myRealm.addInRealm(item: i, bool: false)
+//                        } else {
+//                            createItem()
+//                        }
+//                    }
                 }
                 myRealm.addInRealm(item: todoListItem, bool: true)
                 

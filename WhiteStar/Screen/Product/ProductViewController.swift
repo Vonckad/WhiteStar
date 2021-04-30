@@ -79,24 +79,25 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
         
         let id = product[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let productVC = storyboard.instantiateViewController(identifier: "DetailProductViewController") as! DetailProductViewController
+        let detailVC = storyboard.instantiateViewController(identifier: "DetailProductViewController") as! DetailProductViewController
         
-        productVC.titileText = id.name
-        productVC.aboutText = id.description
-        productVC.price = formatedPrice(index: indexPath)
-        productVC.detailPdoructImage = id.productImages
-        productVC.colorN = id.colorName
+        detailVC.titileText = id.name
+        detailVC.aboutText = id.description
+        detailVC.price = formatedPrice(index: indexPath)
+        detailVC.detailPdoructImage = id.productImages
+        detailVC.colorN = id.colorName
+        detailVC.idProduct = id.idProduct!
     
         DispatchQueue.global().async {
-            productVC.imageData = self.apiClientProduct.getImageData(link: id.mainImage)
+            detailVC.imageData = self.apiClientProduct.getImageData(link: id.mainImage)
         }
 
-        productVC.mainImageString = id.mainImage
+        detailVC.mainImageString = id.mainImage
         
         if let offers = id.offers {
-            productVC.offersDetail = offers
+            detailVC.offersDetail = offers
         }
-        navigationController?.pushViewController(productVC, animated: true)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func formatedPrice(index: IndexPath) -> String {
